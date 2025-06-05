@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cars - DriveEase</title>
+    <link rel="stylesheet" href="cars.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <!-- Car Animation - Positioned to not overlap content -->
+    <div class="car-animation-container">
+        <div class="car">
+            <div class="car-body">
+                <div class="car-top"></div>
+                <div class="car-bottom"></div>
+                <div class="wheel wheel-left"></div>
+                <div class="wheel wheel-right"></div>
+                <div class="headlight"></div>
+                <div class="taillight"></div>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="logo">
+            <h1>DriveEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Cars</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h1>Our Fleet</h1>
+            <p>Choose from our wide selection of premium vehicles</p>
+        </section>
+        
+        <section class="car-filters">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="carType">Car Type</label>
+                    <select id="carType">
+                        <option value="all">All Types</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="electric">Electric</option>
+                        <option value="convertible">Convertible</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="priceRange">Price Range</label>
+                    <select id="priceRange">
+                        <option value="all">All Prices</option>
+                        <option value="economy">Economy ($30-$50)</option>
+                        <option value="standard">Standard ($50-$80)</option>
+                        <option value="premium">Premium ($80-$120)</option>
+                        <option value="luxury">Luxury ($120+)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="seats">Seats</label>
+                    <select id="seats">
+                        <option value="all">All</option>
+                        <option value="2">2 Seats</option>
+                        <option value="4">4 Seats</option>
+                        <option value="5">5 Seats</option>
+                        <option value="7">7+ Seats</option>
+                    </select>
+                </div>
+                
+                <button class="btn-filter">Apply Filters</button>
+            </div>
+        </section>
+        
+        <section class="cars-grid">
+            <!-- Car 1 -->
+            <div class="car-card">
+                <div class="car-image">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Audi_A4_B9_sedan_IMG_1538.jpg" alt="Audi Car">
+                    <div class="car-tag">Electric</div>
+                </div>
+                <div class="car-details">
+                    <h3>Tesla Model 3</h3>
+                    <p class="car-type">Electric</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-bolt"></i> 320 mi range</span>
+                        <span><i class="fas fa-user"></i> 5 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 2 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$75<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car 2 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/2021_Tesla_Model_3_Performance.jpg" alt="Tesla Model 3">
+                    <div class="car-tag">Luxury</div>
+                </div>
+                <div class="car-details">
+                    <h3>BMW 3 Series</h3>
+                    <p class="car-type">Sedan</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-gas-pump"></i> 30 mpg</span>
+                        <span><i class="fas fa-user"></i> 5 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 3 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$85<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car 3 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/2021_Kia_Seltos.jpg" alt="Kia Seltos">
+                    <div class="car-tag">SUV</div>
+                </div>
+                <div class="car-details">
+                    <h3>Toyota RAV4</h3>
+                    <p class="car-type">SUV</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-gas-pump"></i> 28 mpg</span>
+                        <span><i class="fas fa-user"></i> 5 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 4 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$65<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car 4 -->
+            <div class="car-card">
+                <div class="car-image">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/2018_Toyota_Camry_XSE_front_4.5.18.jpg" alt="Toyota Camry">
+
+                    <div class="car-tag">Luxury</div>
+                </div>
+                <div class="car-details">
+                    <h3>Mercedes-Benz E-Class</h3>
+                    <p class="car-type">Sedan</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-gas-pump"></i> 25 mpg</span>
+                        <span><i class="fas fa-user"></i> 5 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 3 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$95<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car 5 -->
+            <div class="car-card">
+                <div class="car-image">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/2018_Ford_Mustang_GT_5.0.jpg" alt="Ford Mustang GT">
+   <div class="car-tag">Sports</div>
+                </div>
+                <div class="car-details">
+                    <h3>Ford Mustang</h3>
+                    <p class="car-type">Convertible</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-gas-pump"></i> 22 mpg</span>
+                        <span><i class="fas fa-user"></i> 4 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 2 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$90<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car 6 -->
+            <div class="car-card">
+                <div class="car-image">
+                   <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/2019_BMW_330i_M_Sport_Automatic_2.0_Front.jpg" alt="BMW 3 Series">
+            <div class="car-tag">SUV</div>
+                </div>
+                <div class="car-details">
+                    <h3>Honda CR-V</h3>
+                    <p class="car-type">SUV</p>
+                    <div class="car-features">
+                        <span><i class="fas fa-gas-pump"></i> 30 mpg</span>
+                        <span><i class="fas fa-user"></i> 5 seats</span>
+                        <span><i class="fas fa-suitcase"></i> 4 bags</span>
+                    </div>
+                    <div class="car-price-book">
+                        <p class="car-price">$60<span>/day</span></p>
+                        <a href="login.html" class="btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DriveEase</h3>
+                <p>Drive Your Dreams, Rent with Ease</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@driveease.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 DriveEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+            
+            // Filter functionality
+            const filterBtn = document.querySelector('.btn-filter');
+            filterBtn.addEventListener('click', function() {
+                alert('Filters applied! In a real application, this would filter the cars based on your selections.');
+            });
+        });
+    </script>
+</body>
+</html>

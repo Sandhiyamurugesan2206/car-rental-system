@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveEase - Premium Car Rental Service</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles to ensure square-shaped boxes and fix car animation */
+        .feature-card, .car-card, .step, .testimonial {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .cars-container, .steps-container, .testimonials-container, .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        /* Make car animation invisible when overlapping with text */
+        .car-animation-container {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        
+        .car-animation-container.hidden {
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-card, .car-card, .step, .testimonial {
+                aspect-ratio: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <!-- Car Animation - Positioned to not overlap content -->
+    <div class="car-animation-container">
+        <div class="car">
+            <div class="car-body">
+                <div class="car-top"></div>
+                <div class="car-bottom"></div>
+                <div class="wheel wheel-left"></div>
+                <div class="wheel wheel-right"></div>
+                <div class="headlight"></div>
+                <div class="taillight"></div>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <div class="logo">
+            <h1>DriveEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="new-models.html">New Models</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.php" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Drive Your Dreams</h1>
+                <p>Premium car rental service for your travel needs</p>
+                <div class="hero-buttons">
+                    <a href="cars.html" class="btn-primary">Browse Cars</a>
+                    <a href="new-models.html" class="btn-secondary">New Models</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Wide Selection</h3>
+                <p>Choose from our diverse fleet of vehicles, from economy to luxury.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <h3>Best Prices</h3>
+                <p>Competitive rates with no hidden fees or charges.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Our customer service team is always ready to assist you.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Convenient Locations</h3>
+                <p>Pick up and drop off at multiple locations across Karur.</p>
+            </div>
+        </section>
+         
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Choose Your Car</h3>
+                    <p>Browse our selection and find the perfect vehicle for your needs.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Make a Reservation</h3>
+                    <p>Select your dates and complete the booking process online.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Pick Up Your Car</h3>
+                    <p>Visit our location, complete the paperwork, and get your keys.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Enjoy Your Journey</h3>
+                    <p>Hit the road with confidence and return the car when you're done.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"DriveEase made my vacation perfect! The car was clean, well-maintained, and the service was exceptional. Will definitely use again."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The booking process was smooth and straightforward. The car was exactly as advertised, and the staff was friendly and helpful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Brown</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Hit the Road?</h2>
+                <p>Book your car today and enjoy a seamless rental experience.</p>
+                <a href="cars.html" class="btn-primary">Browse Cars</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DriveEase</h3>
+                <p>Drive Your Dreams, Rent with Ease</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="new-models.html">New Models</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Main Road, Thalavapalayam, Karur</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@driveease.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 DriveEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+            
+            // Make car animation invisible when overlapping with text
+            const carAnimation = document.querySelector('.car-animation-container');
+            const textElements = document.querySelectorAll('h1, h2, h3, p, a, span');
+            
+            function checkOverlap() {
+                const carRect = carAnimation.getBoundingClientRect();
+                
+                let isOverlapping = false;
+                textElements.forEach(element => {
+                    const elementRect = element.getBoundingClientRect();
+                    
+                    if (!(carRect.right < elementRect.left || 
+                          carRect.left > elementRect.right || 
+                          carRect.bottom < elementRect.top || 
+                          carRect.top > elementRect.bottom)) {
+                        isOverlapping = true;
+                    }
+                });
+                
+                if (isOverlapping) {
+                    carAnimation.classList.add('hidden');
+                } else {
+                    carAnimation.classList.remove('hidden');
+                }
+            }
+            
+            // Check for overlap on animation frame
+            function animate() {
+                checkOverlap();
+                requestAnimationFrame(animate);
+            }
+            
+            animate();
+        });
+    </script>
+</body>
+</html>

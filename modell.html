@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Payment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5, #d7ffd9);
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #4CAF50;
+        }
+        .login-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #388E3C;
+            transform: scale(1.1);
+        }
+        .container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    
+    /* Centering the container */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+        .payment-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .payment-box img {
+            width: 300px;
+            margin: 10px;
+            height:80px;
+        }
+        .qr-code {
+            width: 300px;
+            margin: 10px;
+            
+        
+        }
+        .upi-id {
+            background: #eee;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .pay-button {
+            margin-top: 10px;
+        }
+        .pay-button button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .pay-button button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="https://img.icons8.com/?size=160&id=pMGoyzVDvHJe&format=png" alt="Food Cart Icon" class="logo-icon">
+            <div class="logo-text">SmartCart</div>
+        </div>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html">My Orders</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Complete Your Payment</h2>
+        <p>Choose your preferred UPI payment method</p>
+        <div class="payment-box">
+            <img src="https://miro.medium.com/max/1000/0*BIy_CblCTVoOl5Zg" >   
+        </div>
+        <h3>Scan QR Code</h3>
+        <div class="qr-code">
+            <img src="https://static9.depositphotos.com/1008406/1160/v/950/depositphotos_11605126-stock-illustration-qr-code.jpg" alt="QR Code" width="150">
+        </div>
+        <div class="upi-id">
+            <strong>UPI ID: smartcart.shop@upi</strong>
+            <p>Please use this UPI ID to make your payment</p>
+        </div>
+    
+    <div class="pay-button">
+        <button  onclick="window.location.href='confirmationpage.html'">Pay Now</button>
+    </div>
+</div>
+</body>
+</html>
